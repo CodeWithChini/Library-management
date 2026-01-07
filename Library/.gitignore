@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+.nyc_output
+coverage/
+
+# Uploads (if you have file uploads)
+uploads/
+tmp/
+
+# Sensitive configuration files
+config/production.js
+config/staging.js
+
+# MongoDB data directory (if using local MongoDB)
+data/
+mongodb-data/
+
+# Package lock
+package-lock.json
+yarn.lock
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm
