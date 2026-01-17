@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Librarian = require('../models/Librarian');
-const { authMiddleware, adminMiddleware } = require('../middleware/auth');
+const { authMiddleware, adminMiddleware } = require('../middleware/authMiddleware');
 const jwt = require('jsonwebtoken');
 
 // Register new librarian (Admin only)
@@ -37,11 +37,11 @@ router.post('/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
 
-        const token = jwt.sign(
-            { _id: librarian._id },
-            process.env.JWT_SECRET || 'your-secret-key',
-            { expiresIn: '7d' }
-        );
+        // const token = jwt.sign(
+        //     { _id: librarian._id },
+        //     process.env.JWT_SECRET || 'your-secret-key',
+        //     { expiresIn: '7d' }
+        // );
 
         res.json({
             librarian: {
